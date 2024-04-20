@@ -1,0 +1,51 @@
+.header-pri {
+  margin-bottom: 6rem;
+
+  & > * {
+    display: block;
+  }
+
+  &--bold {
+    font-size: 5.5rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation: moveinLeft 1s ease-out;
+  }
+
+  &--light {
+    letter-spacing: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    animation: moveinRight 1s ease-out;
+    // border: none;
+  }
+}
+
+.header-sec {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3.3rem;
+  font-weight: 600;
+  background-image: linear-gradient(to right, lightgreen, darkgreen);
+  background-clip: text;
+  color: rgba(255, 255, 255, 0);
+  margin-bottom: 7rem;
+
+  &:hover {
+    text-shadow: 1rem 1rem 2rem #0000005e;
+    transform: skewY(2deg) skewX(15deg);
+  }
+}
+
+.header-ter {
+  font-size: 1.7rem;
+  margin: 2rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+}

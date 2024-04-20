@@ -1,0 +1,17 @@
+.feature-card {
+  background-color: rgba(218, 214, 214, 0.699);
+  padding: 3rem 2.9rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-1.3rem) scale(1.1);
+  }
+
+  &__icon {
+    font-size: 6rem;
+    background-image: linear-gradient(to right, rgb(4, 231, 4), darkgreen);
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+}

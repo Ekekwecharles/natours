@@ -1,0 +1,153 @@
+.flip-list {
+  padding: 3rem 6rem 2rem;
+}
+
+.flip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 120rem;
+  margin: 0 auto 10rem;
+  gap: 6rem;
+  font-size: 1.6rem;
+}
+
+.flip-grid ul {
+  list-style: none;
+}
+
+.flip-grid ul li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.flip-grid ul li {
+  padding: 1.5rem 0;
+}
+
+.flip-yellow,
+.flip-green,
+.flip-blue {
+  height: 53rem;
+  perspective: 150rem;
+  position: relative;
+}
+
+.flip-grid .bg-img {
+  height: 22rem;
+  background-position: top;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+  background-blend-mode: screen;
+}
+
+.flip-yellow .bg-img {
+  background-image: linear-gradient(orange, orange), url(../../img/nat-5.jpg);
+}
+
+.flip-green .bg-img {
+  background-image: linear-gradient(green, green), url(../../img/nat-6.jpg);
+}
+
+.flip-blue .bg-img {
+  background-image: linear-gradient(blue, blue), url(../../img/nat-7.jpg);
+}
+
+.flip-header {
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  color: white;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: right;
+  width: 70%;
+}
+
+.flip-header-span {
+  padding: 0.7rem 1.5rem;
+  line-height: 1.2;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.flip-header-span--1 {
+  background-image: linear-gradient(
+    rgba(255, 166, 0, 0.6),
+    rgba(255, 166, 0, 0.6)
+  );
+}
+
+.flip-header-span--2 {
+  background-image: linear-gradient(rgba(0, 128, 0, 0.6), rgba(0, 128, 0, 0.6));
+}
+
+.flip-header-span--3 {
+  background-image: linear-gradient(rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.6));
+}
+
+.flip-grid .side {
+  height: 53rem;
+  width: 100%;
+  transition: all 0.6s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1rem 3rem #000000a2;
+}
+
+.flip-yellow .front-side,
+.flip-green .front-side,
+.flip-blue .front-side {
+  background-color: white;
+}
+
+.flip-yellow .back-side {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(233, 231, 227, 0.658),
+    orange
+  );
+  transform: rotateY(180deg);
+}
+
+.flip-green .back-side {
+  background-image: linear-gradient(to right bottom, rgb(238, 243, 238), green);
+  transform: rotateY(180deg);
+}
+
+.flip-blue .back-side {
+  background-image: linear-gradient(to right bottom, rgb(242, 242, 247), blue);
+  transform: rotateY(180deg);
+}
+
+.flip-yellow:hover .front-side,
+.flip-green:hover .front-side,
+.flip-blue:hover .front-side {
+  transform: rotateY(-180deg);
+}
+
+.flip-yellow:hover .back-side,
+.flip-green:hover .back-side,
+.flip-blue:hover .back-side {
+  transform: rotateY(0);
+}
+
+.back-side-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+}
+
+.only {
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+}
+
+.price {
+  font-size: 6rem;
+  margin-bottom: 7rem;
+  font-weight: 600;
+}

@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #444;
+}
+
+.content {
+  padding: 2.5rem;
+}
+
+.container {
+  background-color: #cecbcb44;
+  position: relative;
+}

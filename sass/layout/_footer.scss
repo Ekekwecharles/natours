@@ -1,0 +1,54 @@
+.footer {
+  background-color: #333;
+  padding: 10rem 6rem;
+  color: #eee;
+  font-size: 1.2rem;
+}
+
+.footer-logo-container {
+  text-align: center;
+}
+
+.footer-logo-img {
+  height: 10rem;
+}
+
+.footer-text-container {
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25rem;
+}
+
+.footer-text-container > * {
+  border-top: 1px solid #aaa;
+  padding-top: 2rem;
+}
+
+.company ul {
+  list-style: none;
+}
+
+.company ul {
+  list-style: none;
+}
+
+.company ul li {
+  display: inline-block;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+.company ul li:hover {
+  background-color: black;
+  color: green;
+  transform: rotate(5deg) scale(1.5);
+}
+
+.copyright p {
+  font-size: 1.3rem;
+}

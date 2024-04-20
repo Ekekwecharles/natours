@@ -1,0 +1,138 @@
+.nav {
+  &__checkbox-label {
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    /* padding: 1.5rem; */
+    font-size: 4rem;
+    background-color: white;
+    position: fixed;
+    top: 4.5rem;
+    right: 4.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+  }
+
+  &__bg {
+    height: 6rem;
+    width: 6rem;
+    background-image: radial-gradient(#7ed56f, #28b485);
+    border-radius: 50%;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    /* transform: scale(200rem); */
+    z-index: 1000;
+    transition: all 1s;
+    padding: 1rem;
+  }
+
+  &__checkbox:checked ~ &__bg {
+    transform: scale(60);
+  }
+
+  &__checkbox:checked ~ &__checkbox-label &__icon::before {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &__checkbox:checked ~ &__checkbox-label &__icon::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked ~ &__checkbox-label &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked ~ &__body {
+    width: 100%;
+    opacity: 1;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox-label:hover .nav-icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox-label:hover .nav-icon::before {
+    top: -1rem;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    position: relative;
+    transition: all 1s;
+  }
+
+  &__icon::before,
+  &__icon::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: -0.8rem;
+    left: 0;
+    transition: all 0.5s;
+  }
+
+  &__icon::after {
+    top: 0.8rem;
+  }
+
+  &__body {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+
+  &__body ul {
+    list-style: none;
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__body li {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    margin: 2rem;
+    transition: all 0.8s;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      white 50%
+    );
+    background-size: 220%;
+    cursor: pointer;
+  }
+
+  &__body li:hover {
+    background-position: 100%;
+    color: green;
+  }
+
+  &__body span {
+    margin-right: 2rem;
+    display: inline-block;
+  }
+}
